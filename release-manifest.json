@@ -1,0 +1,147 @@
+{
+  "manifestSchemaVersion": 1,
+  "product": {
+    "id": "english-notes",
+    "name": "英语摘记"
+  },
+  "channel": "stable",
+  "releaseVersion": "1.0.0",
+  "publishedAt": "2026-10-06T03:00:00Z",
+  "summary": "正式发布准备中，验收与安装包核验完成后启用更新。",
+  "releaseNotesUrl": "https://github.com/morrowframe/english-notes-release/releases",
+  "platforms": {
+    "android": {
+      "platform": "android",
+      "appVersion": "8.11.5-rc.1",
+      "releaseDate": "2026-10-06T03:00:00Z",
+      "minimumOs": {
+        "androidApi": 26
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 1,
+          "upgradeFromMin": 1,
+          "upgradeFromMax": 1
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "8.11.5-rc.1",
+        "disabled": true,
+        "rollout": {
+          "percentage": 100,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [],
+      "android": {
+        "versionName": "8.11.5-rc.1",
+        "versionCode": 81105
+      }
+    },
+    "windows": {
+      "platform": "windows",
+      "appVersion": "0.3.2",
+      "releaseDate": "2026-10-06T03:00:00Z",
+      "minimumOs": {
+        "windows": "10"
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 1,
+          "upgradeFromMin": 1,
+          "upgradeFromMax": 1
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "0.3.2",
+        "disabled": true,
+        "rollout": {
+          "percentage": 100,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [],
+      "windows": {
+        "semanticVersion": "0.3.2"
+      }
+    },
+    "browserExtension": {
+      "platform": "browserExtension",
+      "appVersion": "1.0.0",
+      "releaseDate": "2026-10-06T03:00:00Z",
+      "minimumOs": {
+        "browser": "chromium"
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 2,
+          "upgradeFromMin": 2,
+          "upgradeFromMax": 2
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "1.0.0",
+        "disabled": true,
+        "rollout": {
+          "percentage": 100,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [],
+      "browserExtension": {
+        "extensionVersion": "1.0.0"
+      }
+    }
+  }
+}
