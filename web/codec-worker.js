@@ -1,0 +1,3 @@
+importScripts('./codec/wasm_exec.js');
+const ready=(async()=>{const go=new Go();const response=await fetch('./codec/excel-v8.wasm');if(!response.ok)throw Error('Excel codec unavailable');const {instance}=await WebAssembly.instantiate(await response.arrayBuffer(),go.importObject);void go.run(instance);})();
+self.onmessage=async({data})=>{try{await ready;const result=data.command==='export'?englishNotesExcel('export',data.snapshot):englishNotesExcel('import',new Uint8Array(data.bytes),data.sourceId);if(result instanceof Uint8Array)postMessage({id:data.id,bytes:result.buffer},[result.buffer]);else {const out=JSON.parse(result);if(out.error)throw Error(out.error);postMessage({id:data.id,...out});}}catch(e){postMessage({id:data.id,error:e.message});}};
