@@ -1,5 +1,7 @@
 # 英语摘记 WebDAV Relay
 
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/morrowframe/english-notes-release/tree/main/relay-template)
+
 这是“英语摘记” Full Web 的最小 WebDAV 中转。它只允许来自 `https://morrowframe.github.io` 的浏览器请求，并只转发到 `https://dav.jianguoyun.com/dav/`。
 
 - 不保存账号、授权码或摘记内容
