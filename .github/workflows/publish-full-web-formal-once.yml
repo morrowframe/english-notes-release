@@ -1,0 +1,45 @@
+name: Publish Full Web formal release once
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-full-web-formal-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ARTIFACT_URL: 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-de9c-81f5-8cf7-882b74cce7b9/raw?se=2026-10-07T13%3A08%3A00Z&sp=r&sv=2026-02-06&sr=b&scid=6a08a02e-2156-5dbd-8d72-66bf51accb49&skoid=c69179d1-5b5d-430f-afa3-b9bdcf9d6497&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T00%3A49%3A57Z&ske=2026-10-08T00%3A49%3A57Z&sks=b&skv=2026-02-06&sig=eqp%2Brm3uHYvO6bYcdMt/tFQLytbqDiSpTXQeXfYLgnE%3D'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Download verified formal Web artifact
+        run: |
+          curl --fail --location --retry 3 "$ARTIFACT_URL" --output /tmp/full-web-release.zip
+          test -s /tmp/full-web-release.zip
+      - name: Replace Full Web app only
+        run: |
+          sha256sum release-manifest.json > /tmp/release-manifest.sha256
+          rm -rf assets codec icons index.html manifest.webmanifest shell-assets.json sw.js codec-worker.js
+          unzip -q /tmp/full-web-release.zip -d .
+          test -f index.html
+          test -f sw.js
+          test -f codec/excel-v8.wasm
+          test -f assets/sqlite3-Con_VOcu.wasm
+          grep -R --fixed-strings 'english-notes-release.yzzcgzx.workers.dev' assets >/dev/null
+          sha256sum -c /tmp/release-manifest.sha256
+          test -f web/index.html
+      - name: Commit formal Full Web
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "web: publish formal Full Web release"
+          git push origin HEAD:gh-pages
