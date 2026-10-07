@@ -1,0 +1,46 @@
+name: Publish Full Web direct-sync final once
+on:
+  push:
+    branches:
+      - publish/full-web-direct-sync-final-20261007
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ARTIFACT_URL: 'https://sdmntprwestcentralus.oaiusercontent.com/files/00000000-8c88-81fb-ac25-e4f54397371b/raw?se=2026-10-07T15%3A27%3A29Z&sp=r&sv=2026-02-06&sr=b&scid=4e92346f-b52f-56b5-ad33-26af048b56c7&skoid=c69179d1-5b5d-430f-afa3-b9bdcf9d6497&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T01%3A04%3A25Z&ske=2026-10-08T01%3A04%3A25Z&sks=b&skv=2026-02-06&sig=4vV1RgvWbYxzl7TITiL%2BxqaT2oIlJYjpSr1V9eohi1g%3D'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Download verified Full Web artifact
+        run: |
+          curl --fail --location --retry 3 "$ARTIFACT_URL" --output /tmp/full-web-release.zip
+          test -s /tmp/full-web-release.zip
+      - name: Replace Full Web app only
+        run: |
+          sha256sum release-manifest.json > /tmp/release-manifest.sha256
+          rm -rf assets codec icons index.html manifest.webmanifest shell-assets.json sw.js codec-worker.js relay-test.html
+          unzip -q /tmp/full-web-release.zip -d .
+          test -f index.html
+          test -f sw.js
+          test -f codec/excel-v8.wasm
+          test -n "$(find assets -maxdepth 1 -name 'sqlite3-*.wasm' -print -quit)"
+          grep -R --fixed-strings 'english-notes-release.yzzcgzx.workers.dev' assets >/dev/null
+          grep -R --fixed-strings 'webdav-relay-production.up.railway.app' assets >/dev/null
+          grep -R --fixed-strings '用户名或授权码无法通过验证' assets >/dev/null
+          sha256sum -c /tmp/release-manifest.sha256
+          test -f web/index.html
+      - name: Commit Full Web direct-sync final
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "web: publish direct-sync final"
+          git push origin HEAD:gh-pages
