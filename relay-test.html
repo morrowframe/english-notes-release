@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#165f3d">
+<title>同步连通性测试</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#faf9f5;color:#16211b;margin:0;padding:24px}
+main{max-width:560px;margin:0 auto}
+h1{font-size:28px;margin:12px 0 8px}
+p{line-height:1.7;color:#5f665f}
+label{display:block;margin:18px 0 6px;font-weight:600}
+input{width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #d7d8d2;border-radius:12px;background:#fff;font-size:16px}
+button{margin-top:20px;border:0;border-radius:12px;background:#165f3d;color:#fff;padding:13px 18px;font-size:16px;font-weight:700}
+button:disabled{opacity:.5}
+.card{margin-top:22px;padding:18px;border:1px solid #e1ded5;border-radius:14px;background:#fff;line-height:1.7}
+.ok{color:#165f3d;font-weight:700}.bad{color:#b42318;font-weight:700}
+small{display:block;margin-top:14px;color:#6d746e;line-height:1.6}
+</style>
+</head>
+<body>
+<main>
+<h1>同步连通性测试</h1>
+<p>只测试当前网络能否通过备用同步线路连接坚果云，不会修改英语摘记数据。</p>
+<label for="user">坚果云用户名</label>
+<input id="user" autocomplete="username">
+<label for="pass">坚果云应用授权码</label>
+<input id="pass" type="password" autocomplete="off">
+<button id="run">开始测试</button>
+<div id="result" class="card">等待测试。</div>
+<small>用户名和授权码只在当前浏览器中用于这次请求，不会保存到页面或发送给其他服务。</small>
+</main>
+<script>
+const RELAY='https://webdav-relay-production.up.railway.app';
+const run=document.getElementById('run'),result=document.getElementById('result');
+run.addEventListener('click',async()=>{
+ const user=document.getElementById('user').value.trim(),pass=document.getElementById('pass').value;
+ if(!user||!pass){result.innerHTML='<span class="bad">请把用户名和应用授权码填完整。</span>';return;}
+ run.disabled=true;result.textContent='正在测试，请稍候…';
+ const started=performance.now();
+ try{
+   const auth='Basic '+btoa(unescape(encodeURIComponent(user+':'+pass)));
+   const r=await fetch(RELAY+'/dav/',{method:'PROPFIND',headers:{Authorization:auth,Depth:'0'},cache:'no-store'});
+   const ms=Math.round(performance.now()-started);
+   if(r.status===200||r.status===207){
+     result.innerHTML='<span class="ok">测试成功</span><br>当前网络可以通过备用同步线路连接坚果云。耗时约 '+ms+' ms。';
+   }else if(r.status===401||r.status===403){
+     result.innerHTML='<span class="bad">网络已经连通，但坚果云认证失败。</span><br>请核对用户名和应用授权码。HTTP '+r.status+'。';
+   }else{
+     result.innerHTML='<span class="bad">中转已经连通，但 WebDAV 返回异常。</span><br>HTTP '+r.status+'，耗时约 '+ms+' ms。';
+   }
+ }catch(e){
+   result.innerHTML='<span class="bad">当前网络无法完成 WebDAV 连接。</span><br>请保持 VPN 关闭并重试一次。';
+ }finally{run.disabled=false;}
+});
+</script>
+</body></html>
