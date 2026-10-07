@@ -26,6 +26,7 @@ async function bytes(stream, limit, signal) {
     return result;
   } finally { signal.removeEventListener('abort', abort); reader.releaseLock(); }
 }
+// Test dependency injection cannot change the production upstream or CORS origin.
 export function createRelay({fetcher = fetch, timeoutMs = 10000, maxRequestBytes = 8 * 1024 * 1024, maxResponseBytes = 32 * 1024 * 1024} = {}) {
   return async function relay(request) {
     const origin = request.headers.get('Origin');
@@ -69,9 +70,11 @@ export function createRelay({fetcher = fetch, timeoutMs = 10000, maxRequestBytes
       const outgoing = new Headers();
       for (const h of REQUEST_HEADERS) if (request.headers.has(h)) outgoing.set(h, request.headers.get(h));
       stage = 'upstream';
+      // Construct from a fixed host; query strings cannot select targets. Never follow redirects.
       const upstream = await fetcher(UPSTREAM + url.pathname, {method:request.method, headers:outgoing, ...(request.method === 'GET' ? {} : {body:body.length?body:undefined}), redirect:'manual', credentials:'omit', cache:'no-store', signal:controller.signal});
       for (const h of RESPONSE_HEADERS) if (upstream.headers.has(h)) headers.set(h, upstream.headers.get(h));
       if (upstream.status >= 300 && upstream.status < 400) {
+        // Omit Location so browsers cannot follow. Retain the original redirect status.
         headers.set('X-Relay-Error','redirect_blocked');
         await upstream.body?.cancel();
         return new Response(null, {status:upstream.status, headers});
