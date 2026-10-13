@@ -1,6 +1,6 @@
 {
-  "status": "PASS_LOCAL_WINDOWS_NATIVE_RUNNING",
-  "desktopSourceSHA": "7fd80bffc971c6cc41b8a5aaf910f6ef8c2141fc",
+  "status": "PASS_LOCAL_WINDOWS_SCOPED_NATIVE_REPAIR_RUNNING",
+  "desktopSourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
   "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd",
   "fullWebApprovedSHA": "2cb040a5449ee71fe407dd180b07f00a9aa73f1f",
   "releaseMainPreservedSHA": "447386b784f6af1928cb5ab5f55f0ce2574523a3",
@@ -40,7 +40,8 @@
     "webExtension": "168 tests + typecheck + production bundle PASS",
     "httpInterop": "31 real local HTTP WebDAV scenarios PASS: current Go SQLite/runtime + Kotlin protocol/adapter/client using acknowledged file commit + Web SQLite/runtime",
     "chrome": "Real loaded MV3, populated-outbox 1.0.0→1.0.1 upgrade, actual responsive UI, actual update-notice behavior with local HTTPS metadata fixture PASS",
-    "edge": "Real loaded MV3, populated-outbox 1.0.0→1.0.1 upgrade, responsive UI PASS"
+    "edge": "Real loaded MV3, populated-outbox 1.0.0→1.0.1 upgrade, responsive UI PASS",
+    "powershell": "Actual Linux PowerShell helper suites 23 PASS, red/green repeated PATH regression PASS; Linux portable helper PASS (not native app)"
   },
   "limitations": [
     "Local HTTP DAV is not the real user account; Kotlin file boundary is not installed Android Room/OkHttp",
@@ -49,10 +50,56 @@
     "Windows native automated installed overlay runs separately; user physical devices and original special history remain PENDING"
   ],
   "actions": {
-    "windowsRun": 38461504205,
-    "windowsRunsRequested": 1,
+    "windowsRun": 38468737946,
+    "windowsRunsRequested": 5,
     "androidRunsRequested": 0,
-    "checkpointHeavyCI": 0
+    "checkpointHeavyCI": 0,
+    "firstWindowsRun": {
+      "id": 38461504205,
+      "result": "FAIL before packaging",
+      "reason": "Windows 8.3 aliases caused portable default rejection and raw path assertion mismatch",
+      "nativeRepositoryDomainAppPlatform": "PASS; identical source reused under strict checks"
+    },
+    "repair": {
+      "sourceSHA": "c6b3df6946613794f2a91031efd437c12e19ffd1",
+      "localStorageSuite": "PASS",
+      "localVet": "PASS",
+      "windowsTestCrossCompile": "PASS",
+      "PowerShellAST": "PASS",
+      "portableHelperActualExecution": "PASS Linux .NET; not native GUI"
+    },
+    "attempts": [
+      {
+        "id": 38461504205,
+        "sha": "7fd80bffc971c6cc41b8a5aaf910f6ef8c2141fc",
+        "status": "FAIL_BEFORE_PACKAGING",
+        "reason": "Windows 8.3 alias identity; repository/domain/app/platform individually PASS"
+      },
+      {
+        "id": 38464475218,
+        "sha": "c6b3df6946613794f2a91031efd437c12e19ffd1",
+        "status": "FAIL_BEFORE_BUILD",
+        "reason": "gh API terminal-escape safety requires explicit log flag"
+      },
+      {
+        "id": 38464989782,
+        "sha": "4846f0d4a1f506b9412503979bdbecc597bdea8b",
+        "status": "FAIL_BEFORE_PACKAGING",
+        "reason": "fixed native storage PASS; npm child command lookup failed"
+      },
+      {
+        "id": 38467067923,
+        "sha": "11925f92737ed260735ddd4dc0cc52ec835261c2",
+        "status": "FAIL_BEFORE_PACKAGING",
+        "reason": "npm cmd child PATH exceeds 8191 limit; reproduced locally and fixed with process-only deduplication"
+      },
+      {
+        "id": 38468737946,
+        "sha": "17f2bacf460d1b43f81a3078524e062422af34ac",
+        "status": "RUNNING",
+        "reason": "Final native packaging with actual cmd preflight and strictly verified exact-source reuse"
+      }
+    ]
   },
   "physicalUserDevices": "PENDING",
   "formalRelease": false

@@ -158,11 +158,11 @@
           "delivery": "extensionStore",
           "architecture": "universal",
           "downloadUrl": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/webdav-only-rc-20261013/candidates/webdav-only-20261013/files/EnglishNotes-Extension-1.0.1-Chrome-Edge.zip",
-          "sha256": "89537e137b4f69fe3e078d056cd1339f5c101a27d0565e5f019e1f62afb0e8f5",
-          "fileSize": 1004719,
+          "sha256": "1149e9340f687412718741e21c6d5990a53ee24ba075aae3357a6d1cf1fa3740",
+          "fileSize": 1004870,
           "signatureType": "unpacked-extension",
           "extensions": {
-            "sourceSHA": "7fd80bffc971c6cc41b8a5aaf910f6ef8c2141fc",
+            "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
             "physicalDevices": "PENDING"
           }
         }
@@ -176,7 +176,7 @@
     "candidateCohort": "webdav-only-20261013",
     "physicalDevices": "PENDING",
     "formalRelease": false,
-    "windowsSourceSHA": "7fd80bffc971c6cc41b8a5aaf910f6ef8c2141fc",
+    "windowsSourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
     "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd"
   }
 }
