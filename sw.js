@@ -1,7 +1,7 @@
-const FILES=["assets/index-BpOkr1sZ.css","assets/index-zQgs2YKj.js","assets/sqlite-opfs-worker-Dd-s5EfD.js","assets/sqlite3-Con_VOcu.wasm","assets/sqlite3-opfs-async-proxy-Ck-yCayi.js","assets/sqlite3-worker1-B_sgSmL8.js","codec-worker.js","codec/excel-v8.wasm","codec/wasm_exec.js","icons/app-192.png","icons/app-512.png","icons/app.svg","icons/apple-touch-180.png","icons/maskable-512.png","index.html","manifest.webmanifest"];
+const FILES=["assets/index-BmGR8OYm.js","assets/index-CzBaiBZd.css","assets/sqlite-opfs-worker-Dd-s5EfD.js","assets/sqlite3-Con_VOcu.wasm","assets/sqlite3-opfs-async-proxy-Ck-yCayi.js","assets/sqlite3-worker1-B_sgSmL8.js","codec-worker.js","codec/excel-v8.wasm","codec/wasm_exec.js","icons/app-192.png","icons/app-512.png","icons/app.svg","icons/apple-touch-180.png","icons/maskable-512.png","index.html","manifest.webmanifest"];
 const ROOT=new URL('./',self.location.href);
 const PREFIX='english-notes-shell:'+ROOT.pathname+':';
-const CACHE=PREFIX+"e8e6d1e571aaed7e7924";
+const CACHE=PREFIX+"8dd96b631675a7477bf4";
 const URLS=FILES.map(p=>new URL(p,ROOT).href);
 self.addEventListener('install',event=>event.waitUntil((async()=>{
  const cache=await caches.open(CACHE);
