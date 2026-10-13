@@ -1,0 +1,59 @@
+{
+  "status": "PASS_LOCAL_WINDOWS_NATIVE_RUNNING",
+  "desktopSourceSHA": "7fd80bffc971c6cc41b8a5aaf910f6ef8c2141fc",
+  "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd",
+  "fullWebApprovedSHA": "2cb040a5449ee71fe407dd180b07f00a9aa73f1f",
+  "releaseMainPreservedSHA": "447386b784f6af1928cb5ab5f55f0ce2574523a3",
+  "ghPagesPreservedSHA": "c11cffd80eaa2c469422c0a119adbe6252af2491",
+  "protectedTrees": {
+    "web/app": {
+      "approved": "9b4d31e7273faf26fda825cdb512b935d7f498a2",
+      "candidateIndexEquivalent": true
+    },
+    "web/core": {
+      "approved": "e6917ebe510de5fe4e5708720382ef9ad777daf7",
+      "candidateIndexEquivalent": true
+    },
+    "webdav-relay": {
+      "approved": "98f8cbf32fde64fc9a47853bddaf4e042d79510b",
+      "candidateIndexEquivalent": true
+    },
+    "sync-foundation": {
+      "approved": "09b620c64c2edef2441ccac18497fb82fab700ab",
+      "candidateIndexEquivalent": true
+    },
+    "release-foundation": {
+      "approved": "68d121dc6597bb38887dd2cee0e596b81b4f6375",
+      "candidateIndexEquivalent": true
+    },
+    "release-runtime": {
+      "approved": "2753a52396a2437b08b277464a426be644fa9811",
+      "candidateIndexEquivalent": true
+    }
+  },
+  "regression": {
+    "go": "full go test ./... PASS; final shipping vet PASS; targeted retirement/app entry PASS",
+    "windowsFrontend": "158 tests + typecheck/build/size PASS",
+    "windowsInstallerContract": "15 PASS",
+    "sqliteContract": "13 PASS",
+    "android": "36 suites / 147 tests / 0 failures/errors/skipped; signed Release APK and non-LAN instrumentation APK compiled",
+    "webExtension": "168 tests + typecheck + production bundle PASS",
+    "httpInterop": "31 real local HTTP WebDAV scenarios PASS: current Go SQLite/runtime + Kotlin protocol/adapter/client using acknowledged file commit + Web SQLite/runtime",
+    "chrome": "Real loaded MV3, populated-outbox 1.0.0→1.0.1 upgrade, actual responsive UI, actual update-notice behavior with local HTTPS metadata fixture PASS",
+    "edge": "Real loaded MV3, populated-outbox 1.0.0→1.0.1 upgrade, responsive UI PASS"
+  },
+  "limitations": [
+    "Local HTTP DAV is not the real user account; Kotlin file boundary is not installed Android Room/OkHttp",
+    "Robolectric Native SQLite is not physical Android installation",
+    "Linux Chrome for Testing and Edge MV3 are real browsers; physical Windows browser permission dialogs remain PENDING",
+    "Windows native automated installed overlay runs separately; user physical devices and original special history remain PENDING"
+  ],
+  "actions": {
+    "windowsRun": 38461504205,
+    "windowsRunsRequested": 1,
+    "androidRunsRequested": 0,
+    "checkpointHeavyCI": 0
+  },
+  "physicalUserDevices": "PENDING",
+  "formalRelease": false
+}

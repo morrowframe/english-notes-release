@@ -1,0 +1,182 @@
+{
+  "manifestSchemaVersion": 1,
+  "product": {
+    "id": "english-notes",
+    "name": "英语摘记"
+  },
+  "channel": "stable",
+  "releaseVersion": "1.0.1",
+  "publishedAt": "2026-10-13T20:16:00Z",
+  "summary": "WebDAV-only 正式版安装候选；真实设备验收待完成，更新保持关闭。",
+  "releaseNotesUrl": "https://github.com/morrowframe/english-notes-release/releases",
+  "platforms": {
+    "android": {
+      "platform": "android",
+      "appVersion": "8.11.17",
+      "releaseDate": "2026-10-13T20:16:00Z",
+      "minimumOs": {
+        "androidApi": 26
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 1,
+          "upgradeFromMin": 1,
+          "upgradeFromMax": 1
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "8.11.5-rc.1",
+        "disabled": true,
+        "rollout": {
+          "percentage": 0,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [
+        {
+          "packageId": "android-candidate",
+          "delivery": "apk",
+          "architecture": "universal",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/webdav-only-rc-20261013/candidates/webdav-only-20261013/files/english-notes-8.11.17-81118.apk",
+          "sha256": "af7873211ea37168b5d43933246e084245190ca29e5c155c13bbf826ebf8c116",
+          "fileSize": 13248025,
+          "signatureType": "original-android-signer",
+          "extensions": {
+            "sourceSHA": "4111b099841fff0057558217df141d584a0ee1cd",
+            "physicalDevices": "PENDING"
+          }
+        }
+      ],
+      "android": {
+        "versionName": "8.11.17",
+        "versionCode": 81118
+      }
+    },
+    "windows": {
+      "platform": "windows",
+      "appVersion": "0.3.14",
+      "releaseDate": "2026-10-13T20:16:00Z",
+      "minimumOs": {
+        "windows": "10"
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 1,
+          "upgradeFromMin": 1,
+          "upgradeFromMax": 1
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "0.3.2",
+        "disabled": true,
+        "rollout": {
+          "percentage": 0,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [],
+      "windows": {
+        "semanticVersion": "0.3.14"
+      }
+    },
+    "browserExtension": {
+      "platform": "browserExtension",
+      "appVersion": "1.0.1",
+      "releaseDate": "2026-10-13T20:16:00Z",
+      "minimumOs": {
+        "browser": "chromium"
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 2,
+          "upgradeFromMin": 2,
+          "upgradeFromMax": 2
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "1.0.0",
+        "disabled": true,
+        "rollout": {
+          "percentage": 0,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [
+        {
+          "packageId": "browserExtension-candidate",
+          "delivery": "extensionStore",
+          "architecture": "universal",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/webdav-only-rc-20261013/candidates/webdav-only-20261013/files/EnglishNotes-Extension-1.0.1-Chrome-Edge.zip",
+          "sha256": "89537e137b4f69fe3e078d056cd1339f5c101a27d0565e5f019e1f62afb0e8f5",
+          "fileSize": 1004719,
+          "signatureType": "unpacked-extension",
+          "extensions": {
+            "sourceSHA": "7fd80bffc971c6cc41b8a5aaf910f6ef8c2141fc",
+            "physicalDevices": "PENDING"
+          }
+        }
+      ],
+      "browserExtension": {
+        "extensionVersion": "1.0.1"
+      }
+    }
+  },
+  "extensions": {
+    "candidateCohort": "webdav-only-20261013",
+    "physicalDevices": "PENDING",
+    "formalRelease": false,
+    "windowsSourceSHA": "7fd80bffc971c6cc41b8a5aaf910f6ef8c2141fc",
+    "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd"
+  }
+}
