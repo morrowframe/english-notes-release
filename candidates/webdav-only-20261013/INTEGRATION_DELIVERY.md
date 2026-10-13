@@ -2,8 +2,8 @@
 
 两个代码仓库使用独立分支 `release/webdav-only-rc-20261013`，main 未修改。安装文件源 SHA 与后续证据文档提交分别记录，文档提交未改变可执行源码。
 
-- Desktop 当前证据 HEAD：`f428da619690298acce50c293079e93cce4a1697`；Windows / Extension 冻结源码：`17f2bacf460d1b43f81a3078524e062422af34ac`。
-- Android 当前证据 HEAD：`22d985f97050655e1e8ca2cc9f6bc2e67c03adfd`；签名 APK 冻结源码：`4111b099841fff0057558217df141d584a0ee1cd`。
+- Desktop 当前证据 HEAD：`50d60ab6a0d0b73d0a416d05e6402cec79c7cd95`；Windows / Extension 冻结源码：`17f2bacf460d1b43f81a3078524e062422af34ac`。
+- Android 当前证据 HEAD：`54d63d56e7dad6f6e798f043b54367438cd78bff`；签名 APK 冻结源码：`4111b099841fff0057558217df141d584a0ee1cd`。
 - Desktop 从 LAN v2 HEAD 三方合入批准 Full Web，再合入 Windows P0 原身份/历史恢复修复；staging/update 分支的非 LAN 成果均保留。原代码仓库 `release/webdav-only/INTEGRATION.md` 有整合提交与详细改动。
 
 ## LAN 完整归档
@@ -27,3 +27,5 @@ Full Web `web/app`、`web/core`、`webdav-relay` 以及 Sync Foundation、Releas
 Chrome for Testing 155 与 Edge 155 实际 MV3：加载、选词/上下文/保存/搜索、HTTPS DAV 夹具、重启/离线重试、非空 outbox 的 1.0.0→1.0.1 升级保留身份/配置、响应式设置/Popup/编辑保存、清除凭据与重新授权状态通过。实际浏览器更新提示场景通过。产品权限与原批准版相同，没有扩权；Linux 自动化预授权夹具不能代替日常 Windows 权限弹窗。
 
 真实设备和原账号验收为 [DEVICE_ACCEPTANCE.md](DEVICE_ACCEPTANCE.md) 的 PENDING 项。正式 Release 未创建；候选 Manifest disabled=true、rollout=0。验收通过后只提升同一组已记录 SHA256 的文件，不重建四端。
+
+最终 Windows 原生 run [38468737946](https://github.com/morrowframe/english-notes-desktop/actions/runs/38468737946) 成功：真实旧 Setup 覆盖安装、原身份/历史/业务保留、相同内置 exe、安装后启动、无应用 PID TCP 监听均通过。实际文件尺寸/哈希来自 runner Get-FileHash 输出，见 [原生候选收据](WINDOWS_CANDIDATE_RECEIPT.json) 和 [验证结果](WINDOWS_NATIVE_RESULTS.json)。构建实耗：5 次必要 Windows 尝试，最终成功；Android / 插件未用 Actions 重建。

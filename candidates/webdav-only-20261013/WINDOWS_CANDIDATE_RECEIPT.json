@@ -1,0 +1,21 @@
+{
+  "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+  "version": "0.3.14",
+  "run": "38468737946",
+  "physicalUserDevices": "PENDING",
+  "formalRelease": false,
+  "packages": [
+    {
+      "file": "EnglishNotes-0.3.14-amd64-Setup.exe",
+      "size": 9084769,
+      "sha256": "7b18ca20041aed894013e96748229ef8d3c97521be11e19e29d21eaf3e039441",
+      "signature": "NotSigned"
+    },
+    {
+      "file": "EnglishNotes-Portable-0.3.14-amd64.zip",
+      "size": 7330397,
+      "sha256": "5145871e622910970c3d94a44b32de0632d35b34221db34bc7ba2fe0ebb70424",
+      "signature": "ZIP; see executable signature"
+    }
+  ]
+}

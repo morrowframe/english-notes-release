@@ -1,5 +1,5 @@
 {
-  "status": "PASS_LOCAL_WINDOWS_SCOPED_NATIVE_REPAIR_RUNNING",
+  "status": "PASS_AUTOMATION_FINAL_CANDIDATES_READY_PHYSICAL_PENDING",
   "desktopSourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
   "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd",
   "fullWebApprovedSHA": "2cb040a5449ee71fe407dd180b07f00a9aa73f1f",
@@ -42,7 +42,8 @@
     "chrome": "Real loaded MV3, populated-outbox 1.0.0→1.0.1 upgrade, actual responsive UI, actual update-notice behavior with local HTTPS metadata fixture PASS",
     "edge": "Real loaded MV3, populated-outbox 1.0.0→1.0.1 upgrade, responsive UI PASS",
     "powershell": "Actual Linux PowerShell helper suites 23 PASS, red/green repeated PATH regression PASS; Linux portable helper PASS (not native app)",
-    "candidateManifestV1": "Existing release-foundation validator PASS, disabled=true and rollout=0"
+    "candidateManifestV1": "Existing release-foundation validator PASS, disabled=true and rollout=0",
+    "windowsNative": "PASS; actual 0.3.13→0.3.14 Setup overlay, original identity/history, same Setup/Portable binary, app startup and no application TCP listener"
   },
   "limitations": [
     "Local HTTP DAV is not the real user account; Kotlin file boundary is not installed Android Room/OkHttp",
@@ -97,14 +98,15 @@
       {
         "id": 38468737946,
         "sha": "17f2bacf460d1b43f81a3078524e062422af34ac",
-        "status": "RUNNING",
-        "reason": "Final native packaging with actual cmd preflight and strictly verified exact-source reuse"
+        "status": "SUCCESS",
+        "reason": "Native packaging, same-source strict reuse, actual installed overlay/history retention/startup/no TCP listener PASS"
       }
     ]
   },
   "physicalUserDevices": "PENDING",
   "formalRelease": false,
-  "desktopBranchHEAD": "f428da619690298acce50c293079e93cce4a1697",
-  "androidBranchHEAD": "22d985f97050655e1e8ca2cc9f6bc2e67c03adfd",
-  "branchHEADAdditionalChanges": "Evidence/documentation only; candidate executable source frozen separately"
+  "desktopBranchHEAD": "50d60ab6a0d0b73d0a416d05e6402cec79c7cd95",
+  "androidBranchHEAD": "54d63d56e7dad6f6e798f043b54367438cd78bff",
+  "branchHEADAdditionalChanges": "Evidence/documentation only; candidate executable source frozen separately",
+  "windowsNativeEvidence": "WINDOWS_NATIVE_RESULTS.json"
 }

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+  "run": 38468737946,
+  "job": 115542016573,
+  "os": "GitHub hosted Windows Server 2025 amd64; physical user device PENDING",
+  "checks": {
+    "actualCmdPATHPreflight": "PASS",
+    "frontend": {
+      "typecheck": "PASS",
+      "tests": 158,
+      "productionBuild": "PASS",
+      "size": "PASS"
+    },
+    "nativeAppExcelUpdateTests": "PASS",
+    "shippingVet": "PASS",
+    "unchangedRepositoryDomainAppPlatform": "Prior native PASS reused only after exact source-tree and retained-log SHA checks",
+    "unchangedFixedStorage": "Native storage including 8.3/long alias tests PASS in run 38464989782; exact source-tree and retained-log SHA checked",
+    "setupPortableBuild": "PASS; no Rust/OPAQUE build or LAN DLL packaging",
+    "portableHelpers": "PASS amd64/arm64 fixture; shipped native package is amd64",
+    "oldQualifiedSetupSHA256": "b5139557180c966d98245190c3459227e77818b70235be3102d23bfc86c90d75",
+    "actualSetupOverlay": "0.3.13→0.3.14 PASS",
+    "originalWebDAVHistoryAndIdentityAfterOverlay": "PASS; actual callback log and installed storage/DAV fixture recovery",
+    "installedEqualsPortableExecutable": "PASS SHA equality",
+    "installedApplicationStartup": "PASS actual installed executable remained alive",
+    "listeningTCPForApplicationPID": "none"
+  },
+  "logSHA256": "0253ff921f739863d0b400ac12754cd52c4a8d62a5e2f83898219e3796c62a4e",
+  "evidenceArtifact": {
+    "id": 11850912219,
+    "downloadUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38468737946/artifacts/11850912219",
+    "sha256": "2253f1ae38b57cfaa98148ef270fc7254d36889d3181c56e8635d077c9468045"
+  },
+  "physicalUserDevices": "PENDING",
+  "formalRelease": false
+}

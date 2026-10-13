@@ -108,7 +108,40 @@
           "salt": "english-notes-production-v1"
         }
       },
-      "packages": [],
+      "packages": [
+        {
+          "packageId": "windows-setup",
+          "delivery": "setup",
+          "architecture": "amd64",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-release/releases/download/v1.0.1/EnglishNotes-0.3.14-amd64-Setup.exe",
+          "sha256": "7b18ca20041aed894013e96748229ef8d3c97521be11e19e29d21eaf3e039441",
+          "fileSize": 9084769,
+          "signatureType": "unsigned",
+          "extensions": {
+            "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+            "candidateArtifactUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38468737946/artifacts/11851041993",
+            "nativeValidation": "PASS",
+            "physicalDevices": "PENDING",
+            "publication": "PLANNED_RELEASE_URL_DISABLED"
+          }
+        },
+        {
+          "packageId": "windows-portable",
+          "delivery": "portable",
+          "architecture": "amd64",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-release/releases/download/v1.0.1/EnglishNotes-Portable-0.3.14-amd64.zip",
+          "sha256": "5145871e622910970c3d94a44b32de0632d35b34221db34bc7ba2fe0ebb70424",
+          "fileSize": 7330397,
+          "signatureType": "zip-archive",
+          "extensions": {
+            "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+            "candidateArtifactUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38468737946/artifacts/11851041993",
+            "nativeValidation": "PASS",
+            "physicalDevices": "PENDING",
+            "publication": "PLANNED_RELEASE_URL_DISABLED"
+          }
+        }
+      ],
       "windows": {
         "semanticVersion": "0.3.14"
       }
@@ -177,6 +210,7 @@
     "physicalDevices": "PENDING",
     "formalRelease": false,
     "windowsSourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
-    "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd"
+    "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd",
+    "windowsNativeRun": 38468737946
   }
 }

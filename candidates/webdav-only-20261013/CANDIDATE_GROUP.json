@@ -1,6 +1,6 @@
 {
   "cohort": "webdav-only-20261013",
-  "status": "FINAL_LOCAL_AUTOMATION_PASS_WINDOWS_NATIVE_BUILD_RUNNING",
+  "status": "FINAL_CANDIDATES_READY_AUTOMATION_PASS_PHYSICAL_PENDING",
   "formalRelease": false,
   "physicalUserDevices": "PENDING",
   "windowsRun": 38468737946,
@@ -11,7 +11,8 @@
       "sha256": "1149e9340f687412718741e21c6d5990a53ee24ba075aae3357a6d1cf1fa3740",
       "version": "1.0.1",
       "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
-      "signature": "Unpacked MV3 ZIP; not store-signed"
+      "signature": "Unpacked MV3 ZIP; not store-signed",
+      "downloadUrl": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/webdav-only-rc-20261013/candidates/webdav-only-20261013/files/EnglishNotes-Extension-1.0.1-Chrome-Edge.zip"
     },
     {
       "file": "english-notes-8.11.17-81118.apk",
@@ -19,7 +20,45 @@
       "sha256": "af7873211ea37168b5d43933246e084245190ca29e5c155c13bbf826ebf8c116",
       "version": "8.11.17 / 81118",
       "sourceSHA": "4111b099841fff0057558217df141d584a0ee1cd",
-      "signature": "APK verified; original signer SHA256 2e7fb5691085ea22881c622dcc67b9ff953fce4212bca3a9546799e554e58dbc"
+      "signature": "APK verified; original signer SHA256 2e7fb5691085ea22881c622dcc67b9ff953fce4212bca3a9546799e554e58dbc",
+      "downloadUrl": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/webdav-only-rc-20261013/candidates/webdav-only-20261013/files/english-notes-8.11.17-81118.apk"
+    },
+    {
+      "file": "EnglishNotes-0.3.14-amd64-Setup.exe",
+      "size": 9084769,
+      "sha256": "7b18ca20041aed894013e96748229ef8d3c97521be11e19e29d21eaf3e039441",
+      "signature": "NotSigned",
+      "version": "0.3.14",
+      "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+      "downloadUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38468737946/artifacts/11851041993",
+      "downloadContainer": "Windows candidate artifact; extract its two install files"
+    },
+    {
+      "file": "EnglishNotes-Portable-0.3.14-amd64.zip",
+      "size": 7330397,
+      "sha256": "5145871e622910970c3d94a44b32de0632d35b34221db34bc7ba2fe0ebb70424",
+      "signature": "ZIP; see executable signature",
+      "version": "0.3.14",
+      "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+      "downloadUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38468737946/artifacts/11851041993",
+      "downloadContainer": "Windows candidate artifact; extract its two install files"
     }
-  ]
+  ],
+  "windowsArtifact": {
+    "id": 11851041993,
+    "downloadUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38468737946/artifacts/11851041993",
+    "archiveSize": 16364276,
+    "archiveSHA256": "ad627924af62538bc5789df23044e248c38a3fff61068da296c29bb0e6a984cd",
+    "expiresAt": "2027-01-11T21:11:50Z",
+    "contains": [
+      "EnglishNotes-0.3.14-amd64-Setup.exe",
+      "EnglishNotes-Portable-0.3.14-amd64.zip",
+      "candidate-receipt.json",
+      "SHA256SUMS.txt",
+      "installed-overlay.json",
+      "SOURCE_COMMIT"
+    ],
+    "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac"
+  },
+  "windowsNativeConclusion": "success"
 }
