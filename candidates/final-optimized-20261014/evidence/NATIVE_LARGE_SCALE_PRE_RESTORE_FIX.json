@@ -1,0 +1,21 @@
+{
+  "apkBytes": 9327972,
+  "installedProgramBytes": 32374784,
+  "installedProgramMeasurement": "Android StorageStatsManager",
+  "cacheBytes": 0,
+  "availableStorageBytes": 5988741120,
+  "appDataBytes": 91299840,
+  "databaseFilesBytes": 51188952,
+  "startupProtectionBytes": 562987,
+  "undoBackupBytes": 0,
+  "syncHistoryLogicalBytesInsideDatabase": 18280829,
+  "retiredJournalBytes": 2676834,
+  "appPrivateFilesBytes": 54429401,
+  "records": 10000,
+  "captureMilliseconds": 29636.231411,
+  "backupMilliseconds": 26923.452593,
+  "restoreMilliseconds": 60668.83101,
+  "processPssKilobytesAfterRestore": 553533,
+  "identityOutboxAndRestore": "PASS",
+  "boundary": "actual signed release and native Room on API 28 software emulator, TCG CPU; physical device PENDING"
+}

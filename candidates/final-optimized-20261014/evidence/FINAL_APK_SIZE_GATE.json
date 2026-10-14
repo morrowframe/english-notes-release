@@ -1,0 +1,10 @@
+{
+  "apkBytes": 9328052,
+  "uncompressedPackageBytes": 26876671,
+  "dexBytes": 21590476,
+  "nativeLibraryBytes": 0,
+  "mavenMetadataBytes": 0,
+  "measurement": "APK ZIP and uncompressed payload; not installed program size",
+  "baselineAPKBytes": 13248025,
+  "maximumAPKBytes": 9514613
+}

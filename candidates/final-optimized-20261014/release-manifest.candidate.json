@@ -1,0 +1,219 @@
+{
+  "manifestSchemaVersion": 1,
+  "product": {
+    "id": "english-notes",
+    "name": "英语摘记"
+  },
+  "channel": "stable",
+  "releaseVersion": "1.0.2",
+  "publishedAt": "2026-10-14T03:30:00Z",
+  "summary": "WebDAV-only 最终优化安装候选；真实设备与坚果云验收待完成，更新关闭。",
+  "releaseNotesUrl": "https://github.com/morrowframe/english-notes-release/blob/release/final-optimized-rc-20261014/candidates/final-optimized-20261014/RELEASE_NOTES.md",
+  "platforms": {
+    "android": {
+      "platform": "android",
+      "appVersion": "8.11.18",
+      "releaseDate": "2026-10-14T03:30:00Z",
+      "minimumOs": {
+        "androidApi": 26
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 1,
+          "upgradeFromMin": 1,
+          "upgradeFromMax": 1
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "8.11.5-rc.1",
+        "disabled": true,
+        "rollout": {
+          "percentage": 0,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [
+        {
+          "packageId": "android-candidate",
+          "delivery": "apk",
+          "architecture": "universal",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/final-optimized-rc-20261014/candidates/final-optimized-20261014/files/english-notes-8.11.18-81119.apk",
+          "sha256": "9ea4385abc5a3e61d0416bd912dcae673d6253ee3895e5436d5a5dfa47163f35",
+          "fileSize": 9328052,
+          "signatureType": "original-android-signer",
+          "extensions": {
+            "sourceSHA": "7ff6b59af3c4f8f3f9f920f97322008d573b754b",
+            "physicalDevices": "PENDING"
+          }
+        }
+      ],
+      "android": {
+        "versionName": "8.11.18",
+        "versionCode": 81119
+      },
+      "versionCode": 81119
+    },
+    "windows": {
+      "platform": "windows",
+      "appVersion": "0.3.15",
+      "releaseDate": "2026-10-14T03:30:00Z",
+      "minimumOs": {
+        "windows": "10"
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 1,
+          "upgradeFromMin": 1,
+          "upgradeFromMax": 1
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "0.3.2",
+        "disabled": true,
+        "rollout": {
+          "percentage": 0,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [
+        {
+          "packageId": "windows-setup",
+          "delivery": "setup",
+          "architecture": "amd64",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486",
+          "sha256": "6000fb61a17abc3b654cd173c81523c5ee39d5a0571e18fcfc021cafa40f590a",
+          "fileSize": 9109154,
+          "signatureType": "unsigned",
+          "extensions": {
+            "sourceSHA": "e57842ebc05fe513f74c32acfdb1a58581ef62f6",
+            "candidateArtifactUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486",
+            "nativeValidation": "PASS",
+            "physicalDevices": "PENDING",
+            "publication": "ACTUAL_CANDIDATE_ARTIFACT_DISABLED",
+            "innerFileName": "EnglishNotes-0.3.15-amd64-Setup.exe"
+          }
+        },
+        {
+          "packageId": "windows-portable",
+          "delivery": "portable",
+          "architecture": "amd64",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486",
+          "sha256": "b635624b063030cd6b2c6a970edb29b0df0246ff91706c43037ded4a40cf34d9",
+          "fileSize": 7353952,
+          "signatureType": "zip-archive",
+          "extensions": {
+            "sourceSHA": "e57842ebc05fe513f74c32acfdb1a58581ef62f6",
+            "candidateArtifactUrl": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486",
+            "nativeValidation": "PASS",
+            "physicalDevices": "PENDING",
+            "publication": "ACTUAL_CANDIDATE_ARTIFACT_DISABLED",
+            "innerFileName": "EnglishNotes-Portable-0.3.15-amd64.zip"
+          }
+        }
+      ],
+      "windows": {
+        "semanticVersion": "0.3.15"
+      }
+    },
+    "browserExtension": {
+      "platform": "browserExtension",
+      "appVersion": "1.0.1",
+      "releaseDate": "2026-10-13T20:16:00Z",
+      "minimumOs": {
+        "browser": "chromium"
+      },
+      "compatibility": {
+        "dataContract": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        },
+        "databaseSchema": {
+          "current": 2,
+          "upgradeFromMin": 2,
+          "upgradeFromMax": 2
+        },
+        "excelSchema": {
+          "current": 8,
+          "min": 8,
+          "max": 8
+        },
+        "syncProtocol": {
+          "current": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "updatePolicy": {
+        "severity": "normal",
+        "blockScope": "none",
+        "minSupportedAppVersion": "1.0.0",
+        "disabled": true,
+        "rollout": {
+          "percentage": 0,
+          "salt": "english-notes-production-v1"
+        }
+      },
+      "packages": [
+        {
+          "packageId": "browserExtension-candidate",
+          "delivery": "extensionStore",
+          "architecture": "universal",
+          "downloadUrl": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/webdav-only-rc-20261013/candidates/webdav-only-20261013/files/EnglishNotes-Extension-1.0.1-Chrome-Edge.zip",
+          "sha256": "1149e9340f687412718741e21c6d5990a53ee24ba075aae3357a6d1cf1fa3740",
+          "fileSize": 1004870,
+          "signatureType": "unpacked-extension",
+          "extensions": {
+            "sourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+            "physicalDevices": "PENDING"
+          }
+        }
+      ],
+      "browserExtension": {
+        "extensionVersion": "1.0.1"
+      }
+    }
+  },
+  "extensions": {
+    "candidateCohort": "webdav-only-20261013",
+    "physicalDevices": "PENDING",
+    "formalRelease": false,
+    "windowsSourceSHA": "17f2bacf460d1b43f81a3078524e062422af34ac",
+    "androidSourceSHA": "4111b099841fff0057558217df141d584a0ee1cd",
+    "windowsNativeRun": 38468737946
+  }
+}

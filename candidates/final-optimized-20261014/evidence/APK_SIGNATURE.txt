@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=English Notes, OU=OAI, O=OAI, L=San Francisco, ST=CA, C=US
+Signer #1 certificate SHA-256 digest: 2e7fb5691085ea22881c622dcc67b9ff953fce4212bca3a9546799e554e58dbc
+Signer #1 certificate SHA-1 digest: ee661ca4ac76064666be8636297493e72636a861
+Signer #1 certificate MD5 digest: bd325ca8ec07b34618b3f070bcd4cac4
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 9fb46297440445b7c374dce3716712acbc82eadd516ad167534a348457f408cf
+Signer #1 public key SHA-1 digest: d047a7ad021ddf5a4de786e0d69671fc86c4043e
+Signer #1 public key MD5 digest: 9a6ed13cac61cd5f171db764964ddacc

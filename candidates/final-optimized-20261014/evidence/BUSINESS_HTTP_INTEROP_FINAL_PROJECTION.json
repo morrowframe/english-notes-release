@@ -1,0 +1,78 @@
+{
+  "checks": [
+    "Windows → Web / Android UUID and content",
+    "Old revision adoption + opaque fields",
+    "Independent same-name catalog UUIDs retained",
+    "Web → Windows / Android",
+    "Android → Windows / Web",
+    "Windows update",
+    "Web update",
+    "Android update",
+    "Review Web nullable legacy key → both native adapters",
+    "Review flags/counters and opaque numeric JSON",
+    "Catalog and Relation propagate",
+    "Category rename",
+    "Relation remove and catalog tombstone",
+    "Opaque fields survive Android typed projection and Windows",
+    "LocalState",
+    "Delete / recycle propagated",
+    "Restore preserves UUID",
+    "Disjoint offline changes merge",
+    "Conflict preserved",
+    "Web resolution Change converges on Windows and Android",
+    "All three conflict centers close covered branches",
+    "Post-resolution edits continue without revision mismatch",
+    "Offline outbox remains durable",
+    "Reconnect delivers retained update",
+    "Exact publication retained after batch PUT / manifest failure",
+    "Immutable publication retry delivered once",
+    "Auth failure retains local data / recovery",
+    "Resolved conflict export retains both versions",
+    "Restart identity / repeated sync idempotence",
+    "All three outboxes settle without deleted Relation churn",
+    "Bound Web backup restore archives runtime and preserves editing"
+  ],
+  "root": "/tmp/notes-sync-v1-EMF47E",
+  "requests": 2488,
+  "fixture": "real HTTP WebDAV with UTF-8 directory, strict parent MKCOL, Basic auth and conditional PUT",
+  "windows": {
+    "deviceId": "eb145e04-7f93-439e-b047-81446d247ec9",
+    "deviceName": "Windows",
+    "configured": true,
+    "lastSync": "2026-10-14T03:31:50Z",
+    "message": "同步完成 · 来自云端：新增 0 条，更新 0 条 · 无需确认",
+    "conflicts": 0,
+    "pending": 0,
+    "config": {
+      "url": "http://127.0.0.1:34423/dav/%E8%8B%B1%E8%AF%AD%E6%91%98%E8%AE%B0/",
+      "username": "test",
+      "datasetId": "f3fd6c85-2f75-4266-8026-24ab71747d11",
+      "davBound": true
+    },
+    "receipt": {
+      "devices": [],
+      "added": 0,
+      "updated": 0,
+      "deleted": 0,
+      "restored": 0,
+      "needsConfirmation": 0
+    },
+    "requestTrace": []
+  },
+  "web": {
+    "deviceId": "5cd6aad2-f311-4a40-96c5-b2eb93a41188",
+    "deviceName": "Web 客户端",
+    "config": {
+      "url": "http://127.0.0.1:34423/dav/%E8%8B%B1%E8%AF%AD%E6%91%98%E8%AE%B0/",
+      "username": "test",
+      "datasetId": "f3fd6c85-2f75-4266-8026-24ab71747d11"
+    },
+    "lastSync": "2026-10-14T03:31:50.866Z",
+    "message": "同步完成",
+    "conflicts": 0,
+    "pending": 0
+  },
+  "androidDevice": "548028f3-f278-4a08-82ef-588e6cdf6a96",
+  "result": "PASS",
+  "androidBoundary": "Production protocol/adapter/client + stable DTOs with acknowledged file commit; native Room/Android UI NOT RUN"
+}

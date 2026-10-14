@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "records": 10000,
+  "deviceIdentityPreserved": true,
+  "privateRuntimeAndOutboxPreserved": true,
+  "boundary": "actual signed release MainActivity and PrimaryActivityAdapter on software emulator"
+}

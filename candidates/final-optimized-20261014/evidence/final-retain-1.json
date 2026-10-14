@@ -1,0 +1,17 @@
+{
+  "apkBytes": 9328052,
+  "installedProgramBytes": 32374784,
+  "installedProgramMeasurement": "Android StorageStatsManager",
+  "cacheBytes": 0,
+  "availableStorageBytes": 5955833856,
+  "appDataBytes": 124096512,
+  "databaseFilesBytes": 24932352,
+  "startupProtectionBytes": 6046838,
+  "undoBackupBytes": 0,
+  "syncHistoryLogicalBytesInsideDatabase": 18280829,
+  "retiredJournalBytes": 2676834,
+  "appPrivateFilesBytes": 33656922,
+  "records": 10000,
+  "phase": "final-retain-1",
+  "fullSnapshotAndIdentity": "PASS"
+}

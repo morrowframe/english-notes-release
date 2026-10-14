@@ -1,0 +1,27 @@
+{
+  "web/app": {
+    "baseTree": "9b4d31e7273faf26fda825cdb512b935d7f498a2",
+    "currentTree": "9b4d31e7273faf26fda825cdb512b935d7f498a2"
+  },
+  "web/core": {
+    "baseTree": "e6917ebe510de5fe4e5708720382ef9ad777daf7",
+    "currentTree": "e6917ebe510de5fe4e5708720382ef9ad777daf7"
+  },
+  "webdav-relay": {
+    "baseTree": "98f8cbf32fde64fc9a47853bddaf4e042d79510b",
+    "currentTree": "98f8cbf32fde64fc9a47853bddaf4e042d79510b"
+  },
+  "sync-foundation": {
+    "baseTree": "09b620c64c2edef2441ccac18497fb82fab700ab",
+    "currentTree": "09b620c64c2edef2441ccac18497fb82fab700ab"
+  },
+  "release-foundation": {
+    "baseTree": "68d121dc6597bb38887dd2cee0e596b81b4f6375",
+    "currentTree": "68d121dc6597bb38887dd2cee0e596b81b4f6375"
+  },
+  "release-runtime": {
+    "baseTree": "2753a52396a2437b08b277464a426be644fa9811",
+    "currentTree": "2753a52396a2437b08b277464a426be644fa9811"
+  },
+  "approvedFullWebRelayDiff": ""
+}

@@ -1,0 +1,33 @@
+{
+  "windows": {
+    "sourceSHA": "e57842ebc05fe513f74c32acfdb1a58581ef62f6",
+    "nativeRun": 38500678759,
+    "nativeStatus": "PASS",
+    "installerOverlay": "0.3.14 -> 0.3.15",
+    "frontendTestsPassed": 158,
+    "physicalDevice": "PENDING"
+  },
+  "android": {
+    "sourceSHA": "7ff6b59af3c4f8f3f9f920f97322008d573b754b",
+    "unitTestsPassed": 169,
+    "unitSuites": 45,
+    "nativeSoftwareEmulator": "PASS",
+    "sameFinalFileOverlays": 5,
+    "records": 10000,
+    "actualAppRestoreIdentityOutbox": "PASS",
+    "physicalDevice": "PENDING"
+  },
+  "httpBusinessIntegration": {
+    "passed": 31,
+    "fixture": "actual loopback HTTP, production Go/Kotlin and unchanged Web"
+  },
+  "snapshotCrossLanguage": {
+    "passed": 20,
+    "fixture": "actual HTTP, Go/Kotlin writers/readers and missing snapshot fallback"
+  },
+  "realNutstore": "PENDING",
+  "webRelayExtension": "UNCHANGED",
+  "actionsFinalNativeRuns": 1,
+  "formalReleaseCreated": false,
+  "updatesActivated": false
+}

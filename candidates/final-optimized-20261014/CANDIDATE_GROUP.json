@@ -1,0 +1,58 @@
+{
+  "candidateId": "final-optimized-20261014",
+  "formalRelease": false,
+  "autoUpdateEnabled": false,
+  "protocol": {
+    "syncProtocol": 1,
+    "dataContract": 1,
+    "excelSchema": 8,
+    "databaseSchema": 1
+  },
+  "nativeWindowsRun": 38500678759,
+  "windowsArtifact": {
+    "url": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486",
+    "expiresAt": "2027-01-12T02:22:25Z",
+    "archiveSHA256": "06d844af71bff207d54158b3907c7c4877c9bc49f075773a0c7270b4941963aa"
+  },
+  "packages": [
+    {
+      "platform": "windows",
+      "version": "0.3.15",
+      "file": "EnglishNotes-0.3.15-amd64-Setup.exe",
+      "size": 9109154,
+      "sha256": "6000fb61a17abc3b654cd173c81523c5ee39d5a0571e18fcfc021cafa40f590a",
+      "signature": "NotSigned",
+      "sourceSHA": "e57842ebc05fe513f74c32acfdb1a58581ef62f6",
+      "download": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486"
+    },
+    {
+      "platform": "windows",
+      "version": "0.3.15",
+      "file": "EnglishNotes-Portable-0.3.15-amd64.zip",
+      "size": 7353952,
+      "sha256": "b635624b063030cd6b2c6a970edb29b0df0246ff91706c43037ded4a40cf34d9",
+      "signature": "ZIP; same Windows executable; no signing step",
+      "sourceSHA": "e57842ebc05fe513f74c32acfdb1a58581ef62f6",
+      "download": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486"
+    },
+    {
+      "platform": "android",
+      "version": "8.11.18",
+      "versionCode": 81119,
+      "packageName": "com.jackie.quickentryoffline",
+      "file": "english-notes-8.11.18-81119.apk",
+      "size": 9328052,
+      "sha256": "9ea4385abc5a3e61d0416bd912dcae673d6253ee3895e5436d5a5dfa47163f35",
+      "signature": "APK Signature Scheme v2; original signer",
+      "signerSHA256": "2e7fb5691085ea22881c622dcc67b9ff953fce4212bca3a9546799e554e58dbc",
+      "sourceSHA": "7ff6b59af3c4f8f3f9f920f97322008d573b754b",
+      "download": "https://github.com/morrowframe/english-notes-release/raw/refs/heads/release/final-optimized-rc-20261014/candidates/final-optimized-20261014/files/english-notes-8.11.18-81119.apk"
+    }
+  ],
+  "validation": {
+    "physicalUserDevices": "PENDING",
+    "realNutstore": "PENDING",
+    "windowsNative": "PASS",
+    "androidNative": "PASS_API28_SOFTWARE_EMULATOR"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "measurements": [
+    {
+      "boundary": "actual loopback HTTP and wire validation",
+      "canonicalFilesRetained": 1000,
+      "cold": {
+        "Calls": 42,
+        "Bytes": 278573,
+        "History": 0,
+        "Milliseconds": 1922.014
+      },
+      "dailyOneMissing": {
+        "Calls": 4,
+        "Bytes": 2879,
+        "History": 0,
+        "Milliseconds": 0
+      },
+      "historyBatches": 1000,
+      "legacyCold": {
+        "Calls": 1002,
+        "Bytes": 886949,
+        "History": 1,
+        "Milliseconds": 1052.725
+      }
+    },
+    {
+      "boundary": "actual loopback HTTP and wire validation",
+      "canonicalFilesRetained": 10000,
+      "cold": {
+        "Calls": 331,
+        "Bytes": 2719884,
+        "History": 0,
+        "Milliseconds": 11999.817
+      },
+      "dailyOneMissing": {
+        "Calls": 4,
+        "Bytes": 4126,
+        "History": 0,
+        "Milliseconds": 0
+      },
+      "historyBatches": 10000,
+      "legacyCold": {
+        "Calls": 10002,
+        "Bytes": 8895916,
+        "History": 1,
+        "Milliseconds": 7467.692
+      }
+    },
+    {
+      "boundary": "actual loopback HTTP; explicit deterministic per-request delay, not Nutstore",
+      "historyBatches": 1000,
+      "requestDelayMilliseconds": 2,
+      "results": {
+        "checkpointCold": {
+          "Calls": 42,
+          "Bytes": 277890,
+          "History": 0,
+          "Milliseconds": 1897.842
+        },
+        "legacyCold": {
+          "Calls": 1002,
+          "Bytes": 886951,
+          "History": 1,
+          "Milliseconds": 5428.355
+        }
+      }
+    },
+    {
+      "boundary": "actual loopback HTTP; explicit deterministic per-request delay, not Nutstore",
+      "historyBatches": 10000,
+      "requestDelayMilliseconds": 2,
+      "results": {
+        "checkpointCold": {
+          "Calls": 331,
+          "Bytes": 2719881,
+          "History": 0,
+          "Milliseconds": 8340.555
+        },
+        "legacyCold": {
+          "Calls": 10002,
+          "Bytes": 8895958,
+          "History": 1,
+          "Milliseconds": 43676.761
+        }
+      }
+    }
+  ],
+  "passedTestNodesIncludingSubtests": 397,
+  "passedPackages": [
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/conflict",
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/metadata",
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/model",
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/simulator",
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/transport",
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/engine",
+    "github.com/315497440-sys/english-notes-desktop/internal/repository",
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/transport/lan",
+    "github.com/315497440-sys/english-notes-desktop/internal/excelv8",
+    "github.com/315497440-sys/english-notes-desktop/internal/storage",
+    "github.com/315497440-sys/english-notes-desktop/sync-runtime/transport/webdav"
+  ]
+}

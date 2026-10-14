@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Go checkpoint → Go watermark 0: complete canonical bodies and opaque fields",
+    "Go checkpoint → Go watermark 17: complete canonical bodies and opaque fields",
+    "Go checkpoint → Go watermark 32: complete canonical bodies and opaque fields",
+    "Go checkpoint → Go watermark 64: complete canonical bodies and opaque fields",
+    "Go checkpoint missing → Go complete legacy fallback",
+    "Go checkpoint → Kotlin watermark 0: complete canonical bodies and opaque fields",
+    "Go checkpoint → Kotlin watermark 17: complete canonical bodies and opaque fields",
+    "Go checkpoint → Kotlin watermark 32: complete canonical bodies and opaque fields",
+    "Go checkpoint → Kotlin watermark 64: complete canonical bodies and opaque fields",
+    "Go checkpoint missing → Kotlin complete legacy fallback",
+    "Kotlin checkpoint → Go watermark 0: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint → Go watermark 17: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint → Go watermark 32: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint → Go watermark 64: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint missing → Go complete legacy fallback",
+    "Kotlin checkpoint → Kotlin watermark 0: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint → Kotlin watermark 17: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint → Kotlin watermark 32: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint → Kotlin watermark 64: complete canonical bodies and opaque fields",
+    "Kotlin checkpoint missing → Kotlin complete legacy fallback"
+  ],
+  "boundary": "actual loopback HTTP, production Go/Kotlin checkpoint writers/readers; no real cloud"
+}

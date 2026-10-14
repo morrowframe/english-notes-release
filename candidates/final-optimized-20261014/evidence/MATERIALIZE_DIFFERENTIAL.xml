@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jackie.quickentryoffline.MaterializeDifferentialTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-14T03:29:04" hostname="bfa0df6c1293" time="2.471">
+  <properties/>
+  <testcase name="rowAllocationMatchesFrozenOldProjectionForMixedUpdatesAndCollisions" classname="com.jackie.quickentryoffline.MaterializeDifferentialTest" time="0.562"/>
+  <testcase name="fullCaptureAndProjection1000And10000" classname="com.jackie.quickentryoffline.MaterializeDifferentialTest" time="1.908"/>
+  <system-out><![CDATA[FULL_CAPTURE_JSON {"records":1000,"milliseconds":211.635358,"boundary":"production capture AND business projection on JVM; no physical device claim"}
+FULL_CAPTURE_JSON {"records":10000,"milliseconds":1600.301013,"boundary":"production capture AND business projection on JVM; no physical device claim"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

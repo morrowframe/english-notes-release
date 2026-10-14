@@ -1,0 +1,30 @@
+{
+  "sourceSHA": "e57842ebc05fe513f74c32acfdb1a58581ef62f6",
+  "version": "0.3.15",
+  "run": 38500678759,
+  "job": 115646631267,
+  "status": "PASS",
+  "setupOverlay": "0.3.14 -> 0.3.15 actual installer",
+  "portableSharesInstalledExecutable": true,
+  "applicationStartup": "PASS",
+  "applicationListeningTCP": false,
+  "frontendTests": 158,
+  "windowsInstallerContractTests": 15,
+  "nativeScopes": [
+    "main app",
+    "internal/platform",
+    "internal/storage",
+    "internal/domain",
+    "internal/repository",
+    "internal/app",
+    "internal/excelv8",
+    "internal/updatecheck",
+    "sync-runtime/...",
+    "go vet main/internal/sync-runtime"
+  ],
+  "physicalUserDevices": "PENDING",
+  "artifactId": 11866386486,
+  "artifactURL": "https://github.com/morrowframe/english-notes-desktop/actions/runs/38500678759/artifacts/11866386486",
+  "artifactSHA256": "06d844af71bff207d54158b3907c7c4877c9bc49f075773a0c7270b4941963aa",
+  "artifactExpiresAt": "2027-01-12T02:22:25Z"
+}
