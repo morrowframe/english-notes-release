@@ -54,5 +54,15 @@
     "realNutstore": "PENDING",
     "windowsNative": "PASS",
     "androidNative": "PASS_API28_SOFTWARE_EMULATOR"
+  },
+  "codeRepositories": {
+    "desktop": {
+      "branch": "release/final-optimized-rc-20261014",
+      "HEAD": "3db550e8ec9aa2ee8b397620ccfb5569a1ad621d"
+    },
+    "android": {
+      "branch": "release/final-optimized-rc-20261014",
+      "HEAD": "79ee7ec88fd83d5125ad9c5088bf98fbd7d91ec3"
+    }
   }
 }

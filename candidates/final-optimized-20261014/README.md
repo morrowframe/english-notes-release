@@ -10,3 +10,5 @@
 Full Web / Relay 沿用已经验证的正式站点；浏览器插件沿用上一候选，本轮未改动或重新打包。Windows 安装包当前未做 Authenticode 签名。Android 保持原签名，不需要卸载原应用。
 
 正常恢复保留当前设备身份与私有同步历史；原有损坏库救援路径保持原文件与既有策略，不混同于正常恢复验收。真实坚果云、实际 Windows / 手机、后台限制与长期离线仍待验收。
+
+界面截图：[同步与备份](screenshots/android-sync-and-backup.png)、[真实备份状态](screenshots/android-backup-real-status.png)。截图来自已安装最终 APK 的软件模拟器。
